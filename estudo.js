@@ -40,3 +40,23 @@ function total(){
     }
     document.write("Resultado: " + r);
 }
+
+function somaNota(){
+    let n1 = document.getElementById("b1").value;
+    let n2 = document.getElementById("b2").value;
+    let n3 = document.getElementById("b3").value;
+    let n4 = document.getElementById("b4").value;
+
+    let r = Number(n1)+Number(n2)+Number(n3)+Number(n4);
+
+    document.getElementById("resul").innerHTML = "Soma: " + r;
+}
+
+function media(){
+    let mn1 = document.getElementById("notab1").value;
+    let mn2 = document.getElementById("notab2").value;
+    let mn3 = document.getElementById("notab3").value;
+    let mn4 = document.getElementById("notab4").value; 
+
+    let r = Number(n1)+Number(n2)+Number(n3)+Number(n4)/Number(4);
+}
