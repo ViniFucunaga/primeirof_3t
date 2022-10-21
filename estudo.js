@@ -57,7 +57,7 @@ function total(){
     }
     for(let i =1; i <=t; i++){
         r = v * (1+ (j/100)); 
-        document.write("Mês " + 1 + " - valor: " + moeda(r) + "<br>");
+        document.write("Mês " + i + " - valor: " + moeda(r) + "<br>");
         v = r; 
     }
     document.write("Resultado: " + moeda(r));
