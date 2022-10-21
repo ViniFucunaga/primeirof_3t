@@ -28,17 +28,39 @@ function mostratabuada(){
         document.write("O valor do i " + i + "<br>");
     }
 }
+function moeda(atual){
+    return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+}
+
 function total(){
     let v = document.getElementById("valor").value;
     let j = document.getElementById("juros").value;
     let t = document.getElementById("meses").value;
     let r = 0;
+    if (!Number(v)){
+        alert("O campo valor deve deve ser números")
+        document.getElementById("valor").value = "";
+        document.getElementById("valor").focus();
+        return
+    }
+    if (!Number(j)){
+        alert("O campo juros deve deve ser númerico")
+        document.getElementById("juros").value = "";
+        document.getElementById("juros").focus();
+        return
+    }
+    if (!Number(t)){
+        alert("O campo tempo deve deve ser númerico")
+        document.getElementById("juros").value = "";
+        document.getElementById("juros").focus();
+        return
+    }
     for(let i =1; i <=t; i++){
         r = v * (1+ (j/100)); 
-        document.write("Mês " + 1 + " - valor: " + r + "<br>");
+        document.write("Mês " + 1 + " - valor: " + moeda(r) + "<br>");
         v = r; 
     }
-    document.write("Resultado: " + r);
+    document.write("Resultado: " + moeda(r));
 }
 
 function somaNota(){
@@ -46,17 +68,34 @@ function somaNota(){
     let n2 = document.getElementById("b2").value;
     let n3 = document.getElementById("b3").value;
     let n4 = document.getElementById("b4").value;
-
+    
     let r = Number(n1)+Number(n2)+Number(n3)+Number(n4);
 
     document.getElementById("resul").innerHTML = "Soma: " + r;
 }
 
 function media(){
-    let mn1 = document.getElementById("notab1").value;
-    let mn2 = document.getElementById("notab2").value;
-    let mn3 = document.getElementById("notab3").value;
-    let mn4 = document.getElementById("notab4").value; 
+    let mn1 = document.getElementById("b1").value;
+    let mn2 = document.getElementById("b2").value;
+    let mn3 = document.getElementById("b3").value;
+    let mn4 = document.getElementById("b4").value; 
+    let mes = 4; 
 
-    let r = Number(n1)+Number(n2)+Number(n3)+Number(n4)/Number(4);
+
+    let r = (Number(mn1)+Number(mn2)+Number(mn3)+Number(mn4))/Number(mes);
+
+    document.getElementById("resul1").innerHTML = "média: " + r;
+}
+
+function subtracao(){
+    let mn1 = document.getElementById("b1").value;
+    let mn2 = document.getElementById("b2").value;
+    let mn3 = document.getElementById("b3").value;
+    let mn4 = document.getElementById("b4").value; 
+    let sub = 240; 
+
+
+    let r = Number(mn1)+Number(mn2)+Number(mn3)+Number(mn4)-sub;
+
+    document.getElementById("resul2").innerHTML = "Menos 240: " + r;
 }
