@@ -11,3 +11,21 @@
     padding: 5px;
     border-radius: 10px;
 }
+#spTotal{
+    background: rgb(217, 109, 90);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.calculadora button{
+    background: rgb(217, 109, 90);
+    color: rgb(9, 25, 77);
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+.calculadora button:hover{
+    background: rgba(203, 56, 51, 0.676);
+    color: white;
+    cursor: pointer;
+}
