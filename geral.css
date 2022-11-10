@@ -1,12 +1,26 @@
 
 .calculadora {
-background-color: rgb(180, 29, 3);
+background-color: rgb(192, 75, 55);
 width: 200px;
 padding: 10px;
 border-radius: 15px;
 text-align: center;
+margin-left: auto;
+margin-right: auto;
+box-shadow: 6px 6px rgb(129, 12, 12);
 
 }
+.calculadoraESG {
+    background-color: rgb(64, 92, 28);
+    width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 6px 6px rgb(7, 65, 38);
+    
+    }
 
 .calculadora input {
     background-color: rgb(20, 16, 15);
@@ -14,7 +28,18 @@ text-align: center;
     padding: 5px;
     border-radius: 5px;
 }
-
+.calculadoraESG input {
+    background-color: rgb(36, 117, 113);
+    color: rgb(24, 66, 49);
+    padding: 5px;
+    border-radius: 5px;
+}
+.calculadora input:focus {
+    background-color: rgb(109, 82, 75);
+    color: rgb(255, 239, 233);
+    padding: 5px;
+    border-radius: 5px;
+}
 #sptotal {
     background-color: darkred;
     color: darksalmon;
@@ -48,7 +73,7 @@ text-align: center;
 }
 
 h5 {
-    color: coral;
+    color: rgb(68, 39, 27);
 }
 
 #input-calcf:checked + .calculadora .calcf {
