@@ -20,6 +20,8 @@ function mostra(){
     document.write(lista.length + "<br>");
          for(let i = 0; i < lista.length; i++){
             document.write(lista[i] + "<br>")
+
+            
     }
     
 }
@@ -106,4 +108,5 @@ function subtracao(){
     document.getElementById("result2").innerHTML = "Menos 240: " + r;
 
 }
+
 
